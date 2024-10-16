@@ -13,13 +13,15 @@ index_file="$repo_dir/index.html"
 if [[ -f "$index_file" ]]; then
     sed -i "s|<title>Tugas Portofolio |.*|<title>Tugas Portofolio | $ip|g" "$index_file"
 else
-    echo "<html><head><title>Tugas Portofolio | $ip</title></head><body></body></html>" > "$index_file"
+    echo "<html><head><title>Tugas Portofolio | $ip</title></head><body></body></html>" >"$index_file"
 fi
 
-mv "$repo_dir/"* /var/www/html/
-rm -rf "$repo_dir" /var/www/html/index.html
+chmod +x "$repo_dir/setup_user.sh" "$repo_dir/repair_keys.sh"
+"$repo_dir/setup_user.sh"
 
+mv "$repo_dir/"* /var/www/html/
 mkdir -p /var/www/html/pages/{shafa,agung,dahlan}
 
 git clone https://github.com/juniyasyos/portofolio.git /var/www/html/pages/dahlan/porto
 git clone https://github.com/Agung-67/cv2.git /var/www/html/pages/agung/porto
+git clone https://github.com/shafaybkr23/Website-Portofolio.git /var/www/html/pages/shafa/porto
