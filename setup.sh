@@ -26,8 +26,7 @@ git clone https://github.com/juniyasyos/portofolio.git /var/www/html/pages/dahla
 git clone https://github.com/Agung-67/cv2.git /var/www/html/pages/agung/porto
 git clone https://github.com/shafaybkr23/Website-Portofolio.git /var/www/html/pages/shafa/porto
 git clone https://github.com/maniknur/myCV.git /var/www/html/pages/manik/porto
-# azzury
-# ima
-
+git clone https://github.com/bangjur/web-portofolio /var/www/html/pages/azzuri/porto
+git clone https://github.com/zaidatulnaima/my-portofolio /var/www/html/pages/ima/porto
 
 systemctl restart nginx
